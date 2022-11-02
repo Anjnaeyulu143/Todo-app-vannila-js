@@ -1,0 +1,204 @@
+:root {
+  --clr-neutral-100: hsl(0 0% 100%);
+  --clr-neutral-200: hsl(225, 100%, 98%);
+  --clr-neutral-400: rgb(17, 66, 192);
+  --clr-neutral-800: hsl(223, 47%, 23%);
+
+  --clr-primary-200: hsl(225, 100%, 94%);
+  --clr-primary-300: hsla(245, 83%, 68%);
+  --clr-primary-400: hsl(245, 75%, 52%);
+
+  --fs-700: 2.55rem;
+  --fs-400: 1.75rem;
+  --fs-300: 1rem;
+
+  --fw-400: 500;
+  --fw-700: 700;
+  --fw-900: 900;
+
+  /* Utilites */
+
+  --margin-sm: 1rem;
+  --margin-md: 1.5rem;
+  --margin-lg: 2rem;
+
+  --padding-sm: 0.75rem;
+  --padding-md: 1.25rem;
+  --padding-lg: 2.75rem;
+
+  --margin-top: 1rem;
+  --margin-bottom: 1rem;
+  --margin-left: 1rem;
+  --margin-right: 1rem;
+
+  --padding-top: 1rem;
+  --padding-bottom: 1rem;
+  --padding-left: 1rem;
+  --padding-right: 1rem;
+}
+
+/* Box sizing rules */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove defaulut margin */
+
+body,
+h1,
+button,
+p,
+input {
+  margin: 0;
+}
+
+/* Remove list styles on ul */
+
+ul {
+  list-style-type: none;
+}
+
+/* Set core body defaults */
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  padding: 1rem;
+}
+
+.todo__bg-container {
+  min-height: 100vh;
+}
+
+/* todos-heading */
+
+.todo__items-heading {
+  text-align: center;
+  font-size: var(--fs-700);
+  color: var(--clr-neutral-400);
+  font-weight: var(--fw-900);
+}
+
+.tasks__container {
+  padding: var(--padding-md);
+}
+
+/* title-create-task */
+
+.title__create-task {
+  color: var(--clr-neutral-800);
+  font-size: var(--fs-700);
+  margin-bottom: var(--margin-bottom);
+}
+
+/* User Input */
+
+.textInput {
+  padding: var(--padding-sm);
+  width: 100%;
+  outline: none;
+  border: 2px solid var(--clr-primary-200);
+  color: var(--clr-neutral-800);
+  font-size: var(--fs-300);
+}
+
+/* Button */
+
+button {
+  width: 132px;
+  height: 42px;
+  margin-top: var(--margin-top);
+  background-color: var(--clr-primary-400);
+  color: var(--clr-neutral-100);
+  border-width: 0px;
+  font-weight: var(--fw-700);
+  cursor: pointer;
+}
+
+.button:focus {
+  outline: none;
+}
+
+/* My Tasks */
+
+.title__my-tasks {
+  color: var(--clr-neutral-800);
+  font-size: var(--fs-400);
+  margin-top: var(--margin-top);
+}
+
+/* ul-todos__items-container */
+
+.todo__items-container {
+  max-height: 50vh;
+  padding: 0;
+  margin: 0;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* DYNAMIC STYLES */
+
+/* isTodo Completed */
+
+.checked {
+  text-decoration: line-through;
+}
+
+/* list-item */
+
+.todo__item-container {
+  margin-top: var(--margin-top);
+}
+
+/* Input CheckBox  */
+
+.todo__checkbox-input {
+  width: 20px;
+  height: 20px;
+  margin-top: calc(var(--margin-top) / 2);
+  margin-right: var(--margin-right);
+  cursor: pointer;
+}
+
+/* Label-Container && Lable-Element */
+
+.todo__label-container {
+  width: 100%;
+  border-style: solid;
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+  border-radius: 4px;
+}
+
+.todo__checkbox-label {
+  font-family: "Roboto";
+  font-size: var(--fs-300);
+  font-weight: 400;
+  width: 82%;
+  margin: 0px;
+  padding-top: calc(var(--padding-top) / 2);
+  padding-bottom: calc(var(--padding-bottom) / 2);
+  padding-left: calc(var(--padding-left) * 1.25);
+  padding-right: calc(var(--padding-right) * 1.25);
+  border-radius: 5px;
+}
+
+/* Delete Icon Container */
+
+.delete__icon-container {
+  text-align: right;
+  width: 18%;
+  cursor: pointer;
+}
+
+.delete-icon {
+  padding: var(--padding-sm);
+}
